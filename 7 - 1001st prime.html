@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<script>
+
+//project euler problem #7
+//return the 10001st prime
+
+function nthPrime(n) {
+	count = 1;
+	number = 2;
+	while(true) {
+		if(isPrime(number)) {
+			if(count===n) {
+				return number;
+			}
+			count++;
+		}
+		number++;
+	}
+}
+
+function isPrime(n) {
+	for(var i=2; i<=n/2; i++) {
+		if(n%i==0) {
+			return false;
+		}
+	}
+	return true;
+}
+console.log("start");
+console.log(nthPrime(10001));
+
+</script>
+</body>
+</html>
