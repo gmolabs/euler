@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+<script>
+
+//project euler problem #5
+//return the smallest number that is divisible by 1-20;
+
+
+function smallestMult(min, max) {
+	n = max;
+	while(true) {
+		for(var i=min; i<=max; i++) {
+			if(n%i!==0) {
+				n++;
+				i=1;
+			}
+		}
+		return n;
+	}
+
+}
+
+console.log(smallestMult(2, 20));
+
+</script>
+</body>
+</html>
