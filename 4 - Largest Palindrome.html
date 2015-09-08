@@ -1,0 +1,38 @@
+<html>
+<head></head>
+<body>
+<script>
+
+//project euler problem #4
+//find largest palindrome from the product of two 3-digit numbers
+
+
+function largestPal(min, max) {
+	var largest = 0;
+	for (var i=max; i>min; i--) {
+		for (var j = max; j>min; j--) {
+			var result = i*j;
+			if(isPalindrome(result)) {
+				if(result>largest) {
+					largest = result;
+				}
+			}
+		}
+	}
+	return largest;
+}
+
+console.log(largestPal(100, 999));
+
+
+function isPalindrome(myWord) {
+	myWord = myWord.toString();
+	if(myWord == myWord.split("").reverse().join("")) {
+		return true;
+	}
+	return false;
+}
+
+</script>
+</body>
+</html>
