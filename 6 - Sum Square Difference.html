@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+<script>
+
+//project euler problem #6
+//return the difference between the sum of the squares of the first 100 numbers, and the square of thier sum
+
+function difSumSquare(min, max) {
+	var sqsum = 0;
+	var sumsq = 0;
+	for (var i=min; i<=max; i++) {
+		sqsum+=i;
+		sumsq+=(i*i);
+	}
+	sqsum*=sqsum;
+	return(Math.abs(sqsum-sumsq));
+}
+
+console.log(difSumSquare(1, 100));
+
+</script>
+</body>
+</html>
